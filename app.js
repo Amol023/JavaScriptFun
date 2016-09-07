@@ -131,3 +131,5 @@ console.log(amolID.getID());
     return alphabetNum.join(' ');
   }
   console.log(alphabetPosition("The sunset sets at twelve o' clock."))
+//  Clever solution
+  let alphabetPosition = (text) => text.toUpperCase().replace(/[^A-Z]/g, '').split('').map(ch => ch.charCodeAt(0) - 64).join(' ');
