@@ -159,7 +159,65 @@
 /*************************************************************
   Reverse words in a string
 *************************************************************/
-function reverseWords(str) {
-  return str.split(' ').map((i) => i.split('').reverse().join('')).join(' ');
+// function reverseWords(str) {
+//   return str.split(' ').map((i) => i.split('').reverse().join('')).join(' ');
+// }
+// console.log(reverseWords('This is just an example of how you can write your own TDD tests'))
+
+
+/*************************************************************
+  Sudoku solution validator
+*************************************************************/
+
+
+function rotateMatrix (matrix) {
+   const resultArr = [];
+   let lastRow = matrix[matrix.length - 1];
+
+   for (let newRow = 0; newRow < lastRow.length; newRow++) {
+     const newRows = [];
+     for (let newCol = matrix.length - 1; newCol >= 0; newCol--) {
+       newRows.push(matrix[newCol][newRow]);
+     }
+     resultArr.push(newRows.reverse());
+   }
+   return resultArr;
+ }
+
+function validSolution(board) {
+  const rotated = rotateMatrix(board);
+  console.log(board == rotated)
+  function compare(board, rotated) {
+    for (let k = 0; k < board[0].length; k++) {
+      for(var i = board[k].length; i--;) {
+        if(board[k][i] !== rotated[k][i])
+        return false;
+      }
+      return true;
+      }
+    }
+  }
+
+  console.log(compare(board, rotated))
+  let valid = false;
+
+  for (let i = 0 ; i < board.length; i++) {
+    for(let j = 0 ; j < board[i].length; j++) {
+      if (j !== (board[i].lastIndexOf(board[i][j])) || j !== (rotated[i].lastIndexOf(rotated[i][j]))) {
+        return valid;
+      }
+    }
+  }
+  valid = true;
+  return valid;
 }
-console.log(reverseWords('This is just an example of how you can write your own TDD tests'))
+
+console.log(validSolution([ [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+                            [ 2, 3, 1, 5, 6, 4, 8, 9, 7 ],
+                            [ 3, 1, 2, 6, 4, 5, 9, 7, 8 ],
+                            [ 4, 5, 6, 7, 8, 9, 1, 2, 3 ],
+                            [ 5, 6, 4, 8, 9, 7, 2, 3, 1 ],
+                            [ 6, 4, 5, 9, 7, 8, 3, 1, 2 ],
+                            [ 7, 8, 9, 1, 2, 3, 4, 5, 6 ],
+                            [ 8, 9, 7, 2, 3, 1, 5, 6, 4 ],
+                            [ 9, 7, 8, 3, 1, 2, 6, 4, 5 ] ]))
