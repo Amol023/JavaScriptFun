@@ -54,3 +54,35 @@ var amolID = celebId();
 console.log(amolID.getID());
 amolID.setID(1000);
 console.log(amolID.getID());
+
+/*************************************************************
+  Are they the same?
+  function comp(a,b) -- should check if all element in array b
+  are the square of all the elements in array a
+*************************************************************/
+  function comp(array1, array2){
+    //your code here
+    var count = 0;
+    if (array1 === null || array2 === null) {
+      return false;
+    }
+    array1 = array1.sort((a,b) => a - b);
+    array2 = array2.sort((a,b) => a - b);
+
+    for (var i = 0; i < array1.length; i++) {
+      if (Math.pow(array1[i], 2) === array2[i]) {
+        count++;
+      }
+    }
+
+    if (count === array1.length) {
+      return true;
+    }
+    return false;
+  }
+//  Optimized/Favorite solution
+  function comp(array1, array2) {
+    if(array1 == null || array2 == null) return false;
+    array1.sort((a, b) => a - b); array2.sort((a, b) => a - b);
+    return array1.map(v => v * v).every((v, i) => v == array2[i]);
+  }
