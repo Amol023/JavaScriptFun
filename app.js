@@ -137,22 +137,29 @@
 /*************************************************************
   Pascal's Triangle
 *************************************************************/
-function pascal(depth) {
-  if (depth === 0) {
-    return [[]];
-  }
-  const pascalTriangle = [[1]];
-  for (let i = 0; i < depth - 1; i++) {
-    const subArray = [];
-    subArray.push(1);
-    for(let j = 0; j < pascalTriangle[i].length - 1; j++) {
-      if (pascalTriangle[i][j + 1]) {
-        subArray.push(pascalTriangle[i][j] + pascalTriangle[i][j + 1])
-      }
-    }
-    subArray.push(1)
-    pascalTriangle.push(subArray);
-  }
-  return pascalTriangle
+// function pascal(depth) {
+//   if (depth === 0) {
+//     return [[]];
+//   }
+//   const pascalTriangle = [[1]];
+//   for (let i = 0; i < depth - 1; i++) {
+//     const subArray = [];
+//     subArray.push(1);
+//     for(let j = 0; j < pascalTriangle[i].length - 1; j++) {
+//       if (pascalTriangle[i][j + 1]) {
+//         subArray.push(pascalTriangle[i][j] + pascalTriangle[i][j + 1])
+//       }
+//     }
+//     subArray.push(1)
+//     pascalTriangle.push(subArray);
+//   }
+//   return pascalTriangle
+// }
+
+/*************************************************************
+  Reverse words in a string
+*************************************************************/
+function reverseWords(str) {
+  return str.split(' ').map((i) => i.split('').reverse().join('')).join(' ');
 }
-console.log(pascal(3));
+console.log(reverseWords('This is just an example of how you can write your own TDD tests'))
