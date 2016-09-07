@@ -30,3 +30,27 @@ function bubblesort(array) {
   }
   return !sorted ? bubblesort(array) : array;
 }
+
+/*************************************************************
+  Closure
+*************************************************************/
+//Classic closure example - to see that closures store REFERENCES to the variables
+//not the value of the variable itself --> Thus it takes the most updated value
+
+function celebId() {
+  var ID = 999;
+  return {
+    getID: function() {
+        return ID;
+    },
+    setID: function (n) {
+        ID = n;
+    }
+  }
+}
+
+var amolID = celebId();
+
+console.log(amolID.getID());
+amolID.setID(1000);
+console.log(amolID.getID());
