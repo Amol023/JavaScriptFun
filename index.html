@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello World</title>
+    <link rel='stylesheet' href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href='index.html'>Styles Conference</a>
+      </h1>
+      <h3>August 24-26th - Chicago, IL</h3>
+      <nav>
+        <a href='index.html'>Home</a>
+        <a href='speakers.html'>Speakers</a>
+        <a href='schedule.html'>Schedule</a>
+        <a href='venue.html'>Venue</a>
+        <a href='register.html'>Register</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>
+        Dedicated to the Craft of Building Websites
+        Every year the brightest web designers and front-end developers descend on Chicago to discuss the latest technologies. Join us this August!
+      </h2>
+      <a href='register.html'>Register Now!</a>
+    </section>
+
+    <section>
+      <section>
+        <a href='speakers.html'>
+          <h3>Speakers</h3>
+          <h3>World-class Speakers</h3>
+        </a>
+        <p>
+          Joining us from all around the world are over twenty fantastic speakers, here to share their stories
+        </p>
+      </section>
+
+      <section>
+        <a href='schedule.html'>
+          <h3>Schedule</h3>
+          <h3>Specificity weights of different selectors in CSS</h3>
+        </a>
+        <p class='sel_weight'>
+          The type selector has the lowest specificity weight and holds a point value of 0-0-1.
+          The class selector has a medium specificity weight and holds a point value of 0-1-0.
+          Lastly, the ID selector has a high specificity weight and holds a point value of 1-0-0.
+        </p>
+      </section>
+
+      <section>
+        <a href='venue.html'>
+          <h3>Venue</h3>
+          <h3>Spaces between selectors</h3>
+        </a>
+        <p>
+          Since there isn’t a space between the paragraph type selector and the mustard class selector that means the selector will only select paragraph elements with the class of mustard.
+          If the paragraph type selector was removed, and the mustard class selector had spaces on both sides of it, it would select any element with the class of mustard, not just paragraphs.
+
+          The best practice is to not prefix a class selector with a type selector.
+          Generally we want to select any element with a given class, not just one type of element.
+          And following this best practice, our new combined selector would be better as .hotdog .mustard.
+        </p>
+      </section>
+    </section>
+
+    <section>
+      <h3>Lengths</h3>
+      <h4>Percentages</h4>
+      <p>
+        Percentage lengths are defined in relation to the length of another object.
+        For example, to set the width of an element to 50%, we have to know the width of its parent element, the element it is nested within,
+        and then identify 50% of the parent element’s width.
+      </p>
+      <h4>EM</h4>
+      <p>
+        A single em unit is equivalent to an element’s font size.
+        So, for example, if an element has a font size of 14 pixels and a width set to 5em, the width would equal 70 pixels (14 pixels multiplied by 5).
+      </p>
+      <h4>Width</h4>
+      <p>
+        Please keep in mind that inline-level elements will not accept the width and height properties or any values tied to them. Block and inline-block elements will,
+        however, accept the width and height properties and their corresponding values.
+      </p>
+      <h4>Margin</h4>
+      <p>
+        One oddity with the margin property is that vertical margins, top and bottom, are not accepted by inline-level elements. These vertical margins are, however, accepted by block-level and inline-block elements.
+      </p>
+      <p>
+        To set one value for the top and bottom and another value for the left and right sides of an element, specify two values: top and bottom first, then left and right.
+        To set unique values for all four sides of an element, specify those values in the order of top, right, bottom, and left, moving clockwise.
+      </p>
+      <h3>Margin and Padding colors</h3>
+      <p>
+        The margin and padding properties are completely transparent and do not accept any color values. Being transparent, though, they show the background colors of relative elements. For margins, we see the background color of the parent element, and for padding, we see the background color of the element the padding is applied to.
+      </p>
+    </section>
+  </section>
+    <footer>
+      <small>@ Styles Conference</small>
+      <nav>
+        <a href='index.html'>Home</a>
+        <a href='speakers.html'>Speakers</a>
+        <a href='schedule.html'>Schedule</a>
+        <a href='venue.html'>Venue</a>
+        <a href='register.html'>Register</a>
+      </nav>
+    </footer>
+  </body>
+</html>
