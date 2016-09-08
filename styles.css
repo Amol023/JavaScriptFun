@@ -1,3 +1,36 @@
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 960px;
+  padding-left:30px;
+  padding-right: 30px;
+  /*auto makes sure that left and right margin are the same -- thus centering it*/
+  margin: 0 auto;
+}
+
+h1, h3, h4, p {
+  margin-bottom: 22px;
+}
+
+.btn {
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0;
+}
+
+.btn-alt {
+  border: 1px solid #dfe2e5;
+  padding: 10px 30px;
+}
+
+.hero {
+  padding: 22px 80px 66px 80px;
+}
 p {
    background: hsla(0, 100%, 25%, 0.12);
    padding: 5px;
