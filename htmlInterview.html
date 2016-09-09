@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Interview</title>
+  </head>
+  <body>
+    <section>
+      <h2>What does a doctype do?</h2>
+      <p>
+        Doctype tells the browser the type of file to render/load
+        If the browser cannot for some reason know what kind of file it is
+        Then it will run in quirks mode - not what we want!
+      </p>
+    </section>
+      <h2>Diff. between full standards mode/almost standards mode and quirks mode?</h2>
+      <p>
+        Previously browsers were previous loaded thorugh Netscape or Microsoft IE --
+        Modern browsers run according to w3c standards and if it does not find that in the
+        HTML file, the browser would run the file in Quirks mode -- which is basically
+        loading the file in a wrong way -- the way pages were rendered in versions 6 and
+        older in browsers
+
+        Thus -- Quirks mode was for old rules and Standards mode for new rules
+
+      </p>
+
+    <section>
+      <h2>Difference between HTML and XHTML</h2>
+      <p>
+        So HTML5 has two parsing modes or two syntaxs -- HTML and XML
+        <p>
+          For HTML
+        </p>
+        <ul>
+          <li>
+            Start tags are not required for every element.
+          </li>
+        </ul>
+        <ul>
+          <li>
+            End tags are not required for every element.
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+          Tags and attributes are case-insensitive.
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            Attributes do not need to be quoted.
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            Special characters, or entities, do not have to be escaped.
+          </li>
+        </ul>
+
+      <p>
+        XHTML is a way to write XML syntax
+      </p>
+      <ul>
+        <li>
+          All elements must have a start tag.
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Non-void elements with a start tag must have an end tag (p and li, for example).
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Any element may be “self-closed” using />.
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Empty attributes are forbidden (checked must instead be checked="checked" or checked="true").
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Attribute values must be enclosed in quotes.
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Special characters must be escaped using character entities.
+        </li>
+      </ul>
+
+      </p>
+    </section>
+
+    <section>
+      <h2>What is progressive rendering?</h2>
+      <p>
+        after the client finally receives the complete HTML it will then see that it needs to download additional external resources (such as CSS, JavaScript, fonts, and images), and downloading these external resources will require additional round trips. In addition, pages that do not utilize progressive HTML rendering will also have a slower perceived load time, since the screen will not update until the complete HTML is downloaded and the CSS and fonts referenced in the head section are downloaded. Without progressive HTML rendering, a server/client waterfall chart might be similar to the following:
+      </p>
+    </section>
+
+    <section>
+      <h2>Where should the script tags go? ANd what's the difference between async and defer?</h2>
+      <div class='stackOverFlow'>
+        <a href='http://stackoverflow.com/questions/436411/where-is-the-best-place-to-put-script-tags-in-html-markup' title='async and differ' target='_blank'>
+          Click here to know!
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>What's the difference between sessionStorage, localStorage and cookies?</h2>
+      <div class='quora'>
+        <a href='https://www.quora.com/What-is-the-difference-between-sessionstorage-localstorage-and-Cookies' target='_blank' title='storage'>Answer</a>
+      </div>
+    </section>
+
+    <section>
+
+    </section>
+
+    <section>
+
+    </section>
+
+    <section>
+
+    </section>
+
+    <section>
+
+    </section>
+
+  </body>
+</html>
