@@ -3,10 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>CSS interview</title>
+    <link rel="stylesheet" href="slideshow.css" />
   </head>
   <body>
-    <p>
-      Hello paachu!
-    </p>
+    <!-- <section>
+
+      <h2>Sprites and it's alternatives</h2>
+      <div>
+        <a href="https://css-tricks.com/css-sprites/" title='sprites' target='_blank'>Sprites</a>
+      </div>
+    </section> -->
+    <div class='slide-page'>
+      <img  src="http://www.trekworld.com/wp-content/uploads/2012/09/TrekWorld_Nicholas-Roerich_Kanchendzonga-1944.jpg" />
+    </div>
+    <div class='slide-page'>
+      <img  src="http://3.bp.blogspot.com/-HFFp2DLRIeM/TqQhvesPGwI/AAAAAAAAAi0/zqsY0R9zi0o/s1600/NicholasRoerich9.jpg" />
+    </div>
+    <div class='slide-page'>
+      <img src='http://65.media.tumblr.com/aeb83fcd7d1a692420de244f0102242e/tumblr_njtqjnv4yk1rktvico1_1280.jpg' />
+    </div>
   </body>
+
+  <script>
+    window.addEventListener('click', () => {
+      document.querySelector('.slide-page').remove();
+    });
+
+
+  </script>
 </html>

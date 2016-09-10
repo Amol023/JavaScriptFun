@@ -1,0 +1,43 @@
+body {
+  background-color: pink;
+}
+
+.poem-main {
+  box-sizing: border-box;
+  border: 5px dotted black;
+  width:850px;
+  height: fixed;
+  margin: auto;
+  text-align: center;
+  background: #5b7fbd;
+  font-family: sans-serif;
+}
+
+.poem-header {
+  /*font: Helvetica, Arial, Serif;*/
+  text-align: center;
+  text-transform: full-width;
+  font-weight: bold;
+  font-size: 35px;
+  border-bottom: 5px dotted black;
+}
+
+.poem-content {
+  list-style-type: none;
+}
+
+.poem-content li::first-letter {
+  font-weight:300;
+  font-size: 25px;
+}
+
+.poem-link {
+  color: green;
+}
+
+/*div#nav {
+  float: left;
+  list-style-position: outside;
+  margin: 0px 10px;
+  padding: 0px 20px;
+}*/
