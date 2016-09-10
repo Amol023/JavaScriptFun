@@ -1,16 +1,13 @@
 body {
-  background-color: pink;
+  background-color: black;
 }
 
 .poem-main {
-  box-sizing: border-box;
-  border: 5px dotted black;
-  width:850px;
-  height: fixed;
-  margin: auto;
+	margin: 1em 20%;
+	background-color: #4f4f4f;
   text-align: center;
-  background: #5b7fbd;
   font-family: sans-serif;
+  border-radius: 10px solid pink;
 }
 
 .poem-header {
@@ -19,7 +16,10 @@ body {
   text-transform: full-width;
   font-weight: bold;
   font-size: 35px;
-  border-bottom: 5px dotted black;
+}
+
+.poem-desc {
+  padding: 0px 10px;
 }
 
 .poem-content {
@@ -31,13 +31,21 @@ body {
   font-size: 25px;
 }
 
-.poem-link {
+.copyright {
+  color: white;
+}
+
+.copyright.poem-link {
   color: green;
 }
 
-/*div#nav {
+div#nav {
+list-style-type: none;
   float: left;
-  list-style-position: outside;
-  margin: 0px 10px;
-  padding: 0px 20px;
-}*/
+  width: 25%;
+  margin-right: 10%;
+  margin-left: 0;
+  padding-bottom: 25em;
+  background-color: yellow;
+
+}
