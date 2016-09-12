@@ -170,54 +170,96 @@
 *************************************************************/
 
 
-function rotateMatrix (matrix) {
-   const resultArr = [];
-   let lastRow = matrix[matrix.length - 1];
+// function rotateMatrix (matrix) {
+//    const resultArr = [];
+//    let lastRow = matrix[matrix.length - 1];
+//
+//    for (let newRow = 0; newRow < lastRow.length; newRow++) {
+//      const newRows = [];
+//      for (let newCol = matrix.length - 1; newCol >= 0; newCol--) {
+//        newRows.push(matrix[newCol][newRow]);
+//      }
+//      resultArr.push(newRows.reverse());
+//    }
+//    return resultArr;
+//  }
+//
+// function validSolution(board) {
+//   const rotated = rotateMatrix(board);
+//   console.log(board == rotated)
+//   function compare(board, rotated) {
+//     for (let k = 0; k < board[0].length; k++) {
+//       for(var i = board[k].length; i--;) {
+//         if(board[k][i] !== rotated[k][i])
+//         return false;
+//       }
+//       return true;
+//       }
+//     }
+//   }
+//
+//   console.log(compare(board, rotated))
+//   let valid = false;
+//
+//   for (let i = 0 ; i < board.length; i++) {
+//     for(let j = 0 ; j < board[i].length; j++) {
+//       if (j !== (board[i].lastIndexOf(board[i][j])) || j !== (rotated[i].lastIndexOf(rotated[i][j]))) {
+//         return valid;
+//       }
+//     }
+//   }
+//   valid = true;
+//   return valid;
+// }
+//
+// console.log(validSolution([ [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+//                             [ 2, 3, 1, 5, 6, 4, 8, 9, 7 ],
+//                             [ 3, 1, 2, 6, 4, 5, 9, 7, 8 ],
+//                             [ 4, 5, 6, 7, 8, 9, 1, 2, 3 ],
+//                             [ 5, 6, 4, 8, 9, 7, 2, 3, 1 ],
+//                             [ 6, 4, 5, 9, 7, 8, 3, 1, 2 ],
+//                             [ 7, 8, 9, 1, 2, 3, 4, 5, 6 ],
+//                             [ 8, 9, 7, 2, 3, 1, 5, 6, 4 ],
+//                             [ 9, 7, 8, 3, 1, 2, 6, 4, 5 ] ]))
+//
+//
 
-   for (let newRow = 0; newRow < lastRow.length; newRow++) {
-     const newRows = [];
-     for (let newCol = matrix.length - 1; newCol >= 0; newCol--) {
-       newRows.push(matrix[newCol][newRow]);
-     }
-     resultArr.push(newRows.reverse());
-   }
-   return resultArr;
- }
+// function bubbleSort(array) {
+//   const copy = array;
+//
+//   for(let i = 0, length = copy.length; i < length; i++) {
+//
+//     for (let j = i + 1; j < length; j++) {
+//
+//       if (j && copy[i] > copy[j]) {
+//         let temp = copy[i];
+//         copy[i] = copy[j];
+//         copy[j] = temp;
+//         // [i, j] = [j, i];
+//       }
+//     }
+//   }
+//   return copy;
+// }
 
-function validSolution(board) {
-  const rotated = rotateMatrix(board);
-  console.log(board == rotated)
-  function compare(board, rotated) {
-    for (let k = 0; k < board[0].length; k++) {
-      for(var i = board[k].length; i--;) {
-        if(board[k][i] !== rotated[k][i])
-        return false;
-      }
-      return true;
-      }
-    }
+function quickSort(array) {
+
+  if (array.length === 0) {
+    return [];
   }
 
-  console.log(compare(board, rotated))
-  let valid = false;
+  const left = [];
+  const right = [];
+  let pivot = array[0];
 
-  for (let i = 0 ; i < board.length; i++) {
-    for(let j = 0 ; j < board[i].length; j++) {
-      if (j !== (board[i].lastIndexOf(board[i][j])) || j !== (rotated[i].lastIndexOf(rotated[i][j]))) {
-        return valid;
-      }
+  for (let i = 1, length = array.length; i < length; i++) {
+    if (array[i] < pivot) {
+      left.push(array[i])
+    } else {
+      right.push(array[i])
     }
   }
-  valid = true;
-  return valid;
+  return quickSort(left).concat(pivot, quickSort(right));
 }
-
-console.log(validSolution([ [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
-                            [ 2, 3, 1, 5, 6, 4, 8, 9, 7 ],
-                            [ 3, 1, 2, 6, 4, 5, 9, 7, 8 ],
-                            [ 4, 5, 6, 7, 8, 9, 1, 2, 3 ],
-                            [ 5, 6, 4, 8, 9, 7, 2, 3, 1 ],
-                            [ 6, 4, 5, 9, 7, 8, 3, 1, 2 ],
-                            [ 7, 8, 9, 1, 2, 3, 4, 5, 6 ],
-                            [ 8, 9, 7, 2, 3, 1, 5, 6, 4 ],
-                            [ 9, 7, 8, 3, 1, 2, 6, 4, 5 ] ]))
+// console.log('This is bubble sort', bubbleSort([9,7,6,8,2,4,1]));
+console.log('This is quick sort', quickSort([9,7,6,8,2,4,1]));
